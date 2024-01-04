@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote  name="redbird"
+           fetch="https://github.com/RedBirdROM"
+           revision="14" />
+
+  <!-- RedBirdROM -->
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="redbird" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk" remote="redbird" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="redbird" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/derp/sepolicy" name="device_redbird_sepolicy" remote="redbird" />
+  
+  <!-- Packages -->
+  <project path="packages/apps/NestLauncher" name="packages_apps_NestLauncher" groups="pdk-fs" remote="redbird" />
+  <project path="packages/apps/Aviary" name="packages_apps_Aviary" groups="pdk-fs" remote="redbird" />
+  <project path="packages/apps/Prospect" name="packages_apps_Prospect" remote="redbird" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="redbird" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="redbird" />
+
+  <!-- Prebuilts -->
+  <!-- <project path="prebuilts/redbird" name="prebuilts_derp" remote="redbird" /> !-->
+
+  <!-- Vendor -->
+  <project path="vendor/redbird" name="vendor_redbird" remote="redbird">
+    <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
+  </project>
+  <project path="vendor/overlay" name="vendor_overlay" remote="redbird" />
+</manifest>
