@@ -13,7 +13,7 @@ To set up your build environment and sync DerpFest, please follow this guide: [L
 **To initialize your local repository using the AOSP/CAF based DerpFest source, use a command like this:**
 
 ```bash
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --git-lfs
+repo init -u https://github.com/RedBirdROM/manifest.git -b 14 --git-lfs
 ```
 **Sync up with this command:**
 ```bash
@@ -23,7 +23,7 @@ repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune 
 Building the source
 ---------------
 
-The source at DerpFest is well configured for building.
+The source at RedBirdROM is well configured for building.
 
 **Initiate the build with:**
 ```bash
@@ -31,11 +31,11 @@ The source at DerpFest is well configured for building.
 ```
 **Prepare your device with:**
 ```bash
-lunch derp_$device-user
+lunch redbird_$device-user
 ```
 **Then fire it off with:**
 ```bash
-mka derp
+mka redbird
 ```
 
 Thanks section
@@ -63,6 +63,7 @@ Here's my thanks to people who made this possible:
 * ShapeShiftOS
 * Syberia Project
 * YAAP
+* DerpFest
 
 Using our assets
 ---------------
