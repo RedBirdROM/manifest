@@ -26,7 +26,15 @@
   </project>
 
   <!-- Device -->
-  <project path="device/derp/sepolicy" name="device_redbird_sepolicy" remote="redbird" />
+  <project path="device/redbird/sepolicy" name="device_redbird_sepolicy" remote="redbird" />
+
+  <!-- External -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="redbird" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="redbird" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="redbird" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="redbird" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="redbird" />
+
   
   <!-- Packages -->
   <project path="packages/apps/NestLauncher" name="packages_apps_NestLauncher" groups="pdk-fs" remote="redbird" />
@@ -34,9 +42,6 @@
   <project path="packages/apps/Prospect" name="packages_apps_Prospect" remote="redbird" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="redbird" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="redbird" />
-
-  <!-- Prebuilts -->
-  <!-- <project path="prebuilts/redbird" name="prebuilts_derp" remote="redbird" /> !-->
 
   <!-- Vendor -->
   <project path="vendor/redbird" name="vendor_redbird" remote="redbird">
