@@ -26,13 +26,40 @@
   <project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="manifest" name="manifest" remote="derp" />
 
+<<<<<<< HEAD
 
   <!-- Device -->
+=======
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="derp" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk" remote="derp" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="derp" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/derp/sepolicy" name="device_derp_sepolicy" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="derp" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,sdm660" remote="derp" revision="14-legacy-um" />
   <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr" groups="qcom,lahaina" remote="derp" revision="14-legacy-um" />
   <project path="device/qcom/sepolicy_vndr/sm8450" name="device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" remote="derp" revision="14-caf-sm8450" />
   <project path="device/qcom/sepolicy_vndr/sm8550" name="device_qcom_sepolicy_vndr" groups="qcom,kailua-vendor" remote="derp" revision="14-caf-sm8550" />
+<<<<<<< HEAD
+=======
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="derp" />
 
   <!-- External -->
@@ -42,6 +69,10 @@
   <project path="external/exfatprogs" name="external_exfatprogs" remote="derp" />
   <project path="external/gptfdisk" name="external_gptfdisk" remote="derp" />
   <project path="external/json-c" name="external_json-c" groups="qcom,qssi" remote="derp" />
+<<<<<<< HEAD
+=======
+  <project path="external/libcxx" name="external_libcxx" groups="pdk" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="external/libnl" name="external_libnl" groups="pdk" remote="derp" />
   <project path="external/libvpx" name="external_libvpx" groups="pdk" remote="derp" />
   <project path="external/mksh" name="external_mksh" remote="derp" />  
@@ -51,10 +82,25 @@
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="derp" />
   <project path="external/zstd" name="external_zstd" remote="derp" />
 
+<<<<<<< HEAD
   <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" groups="pdk-cw-fs,pdk-fs" remote="derp" />
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="derp" />
 
   <!-- Hardware repos -->
+=======
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="derp" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="derp" />
+  <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="derp" />
+  <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="derp" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/google/gchips" name="hardware_google_gchips" groups="pdk-lassen" remote="derp" />
+  <project path="hardware/google/graphics/common" name="hardware_google_graphics_common" groups="pdk-lassen" remote="derp" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" groups="generic_fs,pixel" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="derp" />
   <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="derp" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="derp" />
@@ -125,6 +171,7 @@
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="derp" />
 
   <!-- Packages -->
+<<<<<<< HEAD
   <project path="packages/apps/DerpWalls" name="packages_apps_DerpWalls" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/Flash" name="packages_apps_Flash" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" remote="derp" />
@@ -134,6 +181,24 @@
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/SimpleDeviceConfig" name="ProtonAOSP/android_packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="github" revision="sc-qpr3" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="derp" />
+=======
+  <project path="packages/apps/DerpLauncher" name="packages_apps_DerpLauncher" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/DerpSpace" name="packages_apps_DerpSpace" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/DerpWalls" name="packages_apps_DerpWalls" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Flash" name="packages_apps_Flash" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/FlipFlap" name="packages_apps_FlipFlap" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Panic" name="packages_apps_Panic" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="derp" />
+  <project path="packages/apps/Prospect" name="packages_apps_Prospect" remote="derp" />
+  <project path="packages/apps/Ripple" name="packages_apps_Ripple" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/SimpleDeviceConfig" name="ProtonAOSP/android_packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="github" revision="sc-qpr3" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="derp" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="packages/apps/Updater" name="packages_apps_Updater" groups="pdk-fs" remote="derp" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs" remote="derp" />
   <project path="packages/modules/adb" name="packages_modules_adb" groups="pdk" remote="derp" />
@@ -150,7 +215,11 @@
 
   <!-- Prebuilts -->
   <project path="prebuilts/derp" name="prebuilts_derp" remote="derp" />
+<<<<<<< HEAD
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.25" />
+=======
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.37" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
 
   <!-- System -->
   <project path="system/bpf" name="system_bpf" groups="pdk" remote="derp" />
@@ -168,9 +237,18 @@
 
   <!-- Vendor -->
   <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" groups="qcom,qssi" remote="derp" />
+<<<<<<< HEAD
   <project path="vendor/fontage" name="vendor_fontage" remote="derp" />
   <project path="vendor/google/gms" name="DerpFest/vendor_google_gms" remote="gitlab" revision="14" />
   <project path="vendor/google/pixel" name="DerpFest/vendor_google_pixel" remote="gitlab" revision="14" />
+=======
+  <project path="vendor/derp" name="vendor_derp" remote="derp">
+    <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk" />
+  </project>
+  <project path="vendor/fontage" name="vendor_fontage" remote="derp" />
+  <project path="vendor/gms" name="DerpFest/vendor_gms" remote="gitlab" revision="14" clone-depth="1" />
+  <project path="vendor/overlay" name="vendor_overlay" remote="derp" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="derp" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal" name="vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="derp" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="vendor_qcom_opensource_audio-hal_st-hal-ar" groups="qcom,kailua-audio" remote="derp" />

@@ -5,14 +5,22 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
+<<<<<<< HEAD
   <default revision="refs/tags/android-14.0.0_r17"
+=======
+  <default revision="refs/tags/android-14.0.0_r20"
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
            remote="aosp"
            sync-c="true"
            sync-d="true"
            sync-f="true"
            sync-j="4" />
 
+<<<<<<< HEAD
   <superproject name="platform/superproject" remote="aosp" revision="android-14.0.0_r17"/>
+=======
+  <superproject name="platform/superproject" remote="aosp" revision="android-14.0.0_r20" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <contactinfo bugurl="go/repo-bug" />
 
   <project path="build/make" name="platform/build" groups="pdk" >
@@ -1276,5 +1284,9 @@
   <include name="snippets/remove.xml" />
   <include name="snippets/derp.xml" />
   <include name="snippets/lineage.xml" />
+<<<<<<< HEAD
   <include name="snippets/redbird.xml" />
+=======
+  <include name="snippets/pixel.xml" />
+>>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
 </manifest>
