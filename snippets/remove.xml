@@ -83,10 +83,6 @@
   <remove-project name="device/sample" />
   <remove-project name="device/ti/beagle-x15" />
   <remove-project name="device/ti/beagle-x15-kernel" />
-<<<<<<< HEAD
-=======
-  <remove-project name="platform/hardware/google/pixel-sepolicy" />
->>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <remove-project name="kernel/configs" />
 
   <!-- External -->
@@ -95,10 +91,6 @@
   <remove-project name="platform/external/exfatprogs" />
   <remove-project name="platform/external/dtc" />
   <remove-project name="platform/external/gptfdisk" />
-<<<<<<< HEAD
-=======
-  <remove-project name="platform/external/libcxx" />
->>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <remove-project name="platform/external/libnl" />
   <remove-project name="platform/external/libvpx" />
   <remove-project name="platform/external/mksh" />
@@ -117,12 +109,6 @@
   <remove-project name="platform/frameworks/opt/timezonepicker" />
 
   <!-- Hardware -->
-<<<<<<< HEAD
-=======
-  <remove-project name="platform/hardware/google/gchips" />
-  <remove-project name="platform/hardware/google/graphics/common" />
-  <remove-project name="platform/hardware/google/pixel" />
->>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/qcom/audio" />
@@ -135,10 +121,6 @@
   <remove-project name="platform/hardware/ril" />
 
   <!-- Packages -->
-<<<<<<< HEAD
-=======
-  <remove-project name="platform/packages/apps/Gallery2" />
->>>>>>> 2303422 (manifest: Initial setup for DerpFest 14)
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/QuickSearchBox" />
   <remove-project name="platform/packages/apps/Settings" />
